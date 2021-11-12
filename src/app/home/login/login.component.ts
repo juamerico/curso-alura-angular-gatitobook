@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       },
       (erro) => {
         console.log(erro)
-        alert(JSON.stringify("Usuário ou senha inválidos!"))
+        alert(("Usuário ou senha inválidos!"))
       })
     }
 }
