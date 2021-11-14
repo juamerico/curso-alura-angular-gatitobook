@@ -39,8 +39,23 @@
       class="form-control"
       placeholder="Usuário"
       formControlName="userName"
+      required
     />
   </div>
+  <app-mensagem
+    *ngIf="
+      novoUsuarioForm.get('userName')?.errors?.['calopsita'] &&
+      novoUsuarioForm.get('userName')?.touched
+    "
+    mensagem="Usuário deve ser em letras minúsculas"
+  ></app-mensagem>
+  <app-mensagem
+    *ngIf="
+    novoUsuarioForm.get('userName')?.errors?.['required'] &&
+    novoUsuarioForm.get('userName')?.touched
+  "
+    mensagem="Usuário obrigatório"
+  ></app-mensagem>
 
   <div class="form-group">
     <input
