@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
 
 @NgModule({
@@ -18,7 +18,8 @@ import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
     CommonModule,
     HomeRoutingModule,
     FormsModule, //pra poder usar template forms
-    MensagemModule
+    MensagemModule,
+    ReactiveFormsModule //para poder usar formulários reativos
   ],
   exports: [
     HomeComponent
